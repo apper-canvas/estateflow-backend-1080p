@@ -1,0 +1,167 @@
+[
+  {
+    "id": "inq-1",
+    "propertyId": "prop-1",
+    "userId": "user-1",
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1-555-0123",
+    "message": "I'm interested in scheduling a viewing for this property. What times are available this week?",
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": "inq-2",
+    "propertyId": "prop-3",
+    "userId": "user-5",
+    "name": "David Brown",
+    "email": "david.brown@email.com",
+    "phone": "+1-555-0654",
+    "message": "Could you provide more information about the HOA fees and building amenities?",
+    "timestamp": "2024-01-16T14:22:00.000Z",
+    "status": "responded"
+  },
+  {
+    "id": "inq-3",
+    "propertyId": "prop-5",
+    "userId": "user-9",
+    "name": "Christopher Garcia",
+    "email": "chris.garcia@email.com",
+    "phone": "+1-555-0369",
+    "message": "Is the seller open to negotiations on the price? Also, when was the roof last replaced?",
+    "timestamp": "2024-01-17T09:15:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": "inq-4",
+    "propertyId": "prop-2",
+    "userId": "user-3",
+    "name": "Michael Davis",
+    "email": "michael.davis@email.com",
+    "phone": "+1-555-0789",
+    "message": "I love the historic character of this home. Can we arrange a tour this weekend?",
+    "timestamp": "2024-01-18T16:45:00.000Z",
+    "status": "scheduled"
+  },
+  {
+    "id": "inq-5",
+    "propertyId": "prop-6",
+    "userId": "user-1",
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1-555-0123",
+    "message": "What is the lease term for this apartment? Are pets allowed?",
+    "timestamp": "2024-01-19T11:30:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": "inq-6",
+    "propertyId": "prop-4",
+    "userId": "user-7",
+    "name": "Robert Taylor",
+    "email": "robert.taylor@email.com",
+    "phone": "+1-555-0147",
+    "message": "My business is interested in this office space. Can we discuss the lease terms and move-in timeline?",
+    "timestamp": "2024-01-20T13:20:00.000Z",
+    "status": "responded"
+  },
+  {
+    "id": "inq-7",
+    "propertyId": "prop-7",
+    "userId": "user-5",
+    "name": "David Brown",
+    "email": "david.brown@email.com",
+    "phone": "+1-555-0654",
+    "message": "This loft is exactly what I've been looking for! Is it still available for purchase?",
+    "timestamp": "2024-01-21T08:45:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": "inq-8",
+    "propertyId": "prop-10",
+    "userId": "user-5",
+    "name": "David Brown",
+    "email": "david.brown@email.com",
+    "phone": "+1-555-0654",
+    "message": "I'm interested in this luxury estate. Could you provide more details about the property taxes and maintenance costs?",
+    "timestamp": "2024-01-22T15:10:00.000Z",
+    "status": "scheduled"
+  },
+  {
+    "id": "inq-9",
+    "propertyId": "prop-8",
+    "userId": "user-9",
+    "name": "Christopher Garcia",
+    "email": "chris.garcia@email.com",
+    "phone": "+1-555-0369",
+    "message": "The mountain cabin looks perfect for our family retreat. Is financing available?",
+    "timestamp": "2024-01-23T12:55:00.000Z",
+    "status": "responded"
+  },
+  {
+    "id": "inq-10",
+    "propertyId": "prop-12",
+    "userId": "user-7",
+    "name": "Robert Taylor",
+    "email": "robert.taylor@email.com",
+    "phone": "+1-555-0147",
+    "message": "We need warehouse space for our expanding business. What are the loading dock specifications?",
+    "timestamp": "2024-01-24T10:05:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": "inq-11",
+    "propertyId": "prop-13",
+    "userId": "user-1",
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1-555-0123",
+    "message": "The beachfront location is amazing! What's included in the monthly rent?",
+    "timestamp": "2024-01-25T14:40:00.000Z",
+    "status": "responded"
+  },
+  {
+    "id": "inq-12",
+    "propertyId": "prop-14",
+    "userId": "user-9",
+    "name": "Christopher Garcia",
+    "email": "chris.garcia@email.com",
+    "phone": "+1-555-0369",
+    "message": "The farmhouse on 5 acres is exactly what we're looking for. Can we see it this week?",
+    "timestamp": "2024-01-26T09:25:00.000Z",
+    "status": "scheduled"
+  },
+  {
+    "id": "inq-13",
+    "propertyId": "prop-15",
+    "userId": "user-9",
+    "name": "Christopher Garcia",
+    "email": "chris.garcia@email.com",
+    "phone": "+1-555-0369",
+    "message": "I love the industrial feel of this loft. When is the earliest move-in date?",
+    "timestamp": "2024-01-27T16:15:00.000Z",
+    "status": "pending"
+  },
+  {
+    "id": "inq-14",
+    "propertyId": "prop-9",
+    "userId": "user-7",
+    "name": "Robert Taylor",
+    "email": "robert.taylor@email.com",
+    "phone": "+1-555-0147",
+    "message": "This retail space would be perfect for our new store. What are the foot traffic numbers?",
+    "timestamp": "2024-01-28T11:50:00.000Z",
+    "status": "responded"
+  },
+  {
+    "id": "inq-15",
+    "propertyId": "prop-11",
+    "userId": "user-8",
+    "name": "Jennifer Lee",
+    "email": "jennifer.lee@email.com",
+    "phone": "+1-555-0258",
+    "message": "My daughter is starting university nearby. Is this studio apartment still available for rent?",
+    "timestamp": "2024-01-29T13:35:00.000Z",
+    "status": "pending"
+  }
+]

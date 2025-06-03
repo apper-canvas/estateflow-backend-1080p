@@ -1,0 +1,92 @@
+[
+  {
+    "id": "user-1",
+    "type": "buyer",
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1-555-0123",
+    "savedProperties": ["prop-1", "prop-3", "prop-6"],
+    "listings": []
+  },
+  {
+    "id": "user-2",
+    "type": "agent",
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@realty.com",
+    "phone": "+1-555-0456",
+    "savedProperties": [],
+    "listings": ["prop-1", "prop-6", "prop-9", "prop-12", "prop-15"]
+  },
+  {
+    "id": "user-3",
+    "type": "owner",
+    "name": "Michael Davis",
+    "email": "michael.davis@email.com",
+    "phone": "+1-555-0789",
+    "savedProperties": ["prop-2", "prop-4"],
+    "listings": ["prop-8"]
+  },
+  {
+    "id": "user-4",
+    "type": "agent",
+    "name": "Emily Wilson",
+    "email": "emily.wilson@homes.com",
+    "phone": "+1-555-0321",
+    "savedProperties": [],
+    "listings": ["prop-2", "prop-5", "prop-8", "prop-11", "prop-14"]
+  },
+  {
+    "id": "user-5",
+    "type": "buyer",
+    "name": "David Brown",
+    "email": "david.brown@email.com",
+    "phone": "+1-555-0654",
+    "savedProperties": ["prop-5", "prop-7", "prop-10"],
+    "listings": []
+  },
+  {
+    "id": "user-6",
+    "type": "agent",
+    "name": "Lisa Martinez",
+    "email": "lisa.martinez@premium.com",
+    "phone": "+1-555-0987",
+    "savedProperties": [],
+    "listings": ["prop-4", "prop-7", "prop-10", "prop-13"]
+  },
+  {
+    "id": "user-7",
+    "type": "buyer",
+    "name": "Robert Taylor",
+    "email": "robert.taylor@email.com",
+    "phone": "+1-555-0147",
+    "savedProperties": ["prop-9", "prop-12"],
+    "listings": []
+  },
+  {
+    "id": "user-8",
+    "type": "owner",
+    "name": "Jennifer Lee",
+    "email": "jennifer.lee@email.com",
+    "phone": "+1-555-0258",
+    "savedProperties": ["prop-11"],
+    "listings": ["prop-3", "prop-13"]
+  },
+  {
+    "id": "user-9",
+    "type": "buyer",
+    "name": "Christopher Garcia",
+    "email": "chris.garcia@email.com",
+    "phone": "+1-555-0369",
+    "savedProperties": ["prop-14", "prop-15"],
+    "listings": []
+  },
+  {
+    "id": "user-10",
+    "type": "owner",
+    "name": "Amanda Rodriguez",
+    "email": "amanda.rodriguez@email.com",
+    "phone": "+1-555-0741",
+    "savedProperties": [],
+    "listings": ["prop-15"]
+  }
+]

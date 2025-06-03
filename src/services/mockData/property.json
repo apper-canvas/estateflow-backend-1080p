@@ -1,0 +1,407 @@
+[
+  {
+    "id": "prop-1",
+    "title": "Modern Downtown Condo with City Views",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 850000,
+    "address": {
+      "street": "123 Urban Plaza",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102"
+    },
+    "coordinates": {
+      "lat": 37.7749,
+      "lng": -122.4194
+    },
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1200,
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Parking", "Balcony", "Air Conditioning"],
+    "description": "Stunning modern condo in the heart of downtown with panoramic city views. Features floor-to-ceiling windows, premium finishes, and access to world-class amenities.",
+    "agentId": "agent-1"
+  },
+  {
+    "id": "prop-2",
+    "title": "Charming Victorian Home in Historic District",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 1250000,
+    "address": {
+      "street": "456 Heritage Lane",
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02116"
+    },
+    "coordinates": {
+      "lat": 42.3601,
+      "lng": -71.0589
+    },
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 2800,
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Garden", "Fireplace", "Parking", "Laundry", "Security System"],
+    "description": "Beautiful Victorian home with original architectural details, updated kitchen, and private garden. Perfect blend of historic charm and modern convenience.",
+    "agentId": "agent-2"
+  },
+  {
+    "id": "prop-3",
+    "title": "Luxury Penthouse with Rooftop Terrace",
+    "type": "residential",
+    "listingType": "rent",
+    "price": 8500,
+    "address": {
+      "street": "789 Skyline Drive",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001"
+    },
+    "coordinates": {
+      "lat": 40.7128,
+      "lng": -74.0060
+    },
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "area": 2200,
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Balcony", "Air Conditioning", "Dishwasher"],
+    "description": "Spectacular penthouse with private rooftop terrace offering 360-degree city views. Premium finishes throughout and access to full-service building amenities.",
+    "agentId": "agent-1"
+  },
+  {
+    "id": "prop-4",
+    "title": "Contemporary Office Space in Business District",
+    "type": "commercial",
+    "listingType": "rent",
+    "price": 12000,
+    "address": {
+      "street": "321 Corporate Center",
+      "city": "Chicago",
+      "state": "IL",
+      "zipCode": "60601"
+    },
+    "coordinates": {
+      "lat": 41.8781,
+      "lng": -87.6298
+    },
+    "bedrooms": 0,
+    "bathrooms": 4,
+    "area": 3500,
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Parking", "Security System", "Air Conditioning"],
+    "description": "Modern office space with open floor plan, conference rooms, and stunning views. Perfect for growing businesses seeking a prestigious address.",
+    "agentId": "agent-3"
+  },
+  {
+    "id": "prop-5",
+    "title": "Cozy Suburban Home with Large Backyard",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 675000,
+    "address": {
+      "street": "654 Maple Street",
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "78701"
+    },
+    "coordinates": {
+      "lat": 30.2672,
+      "lng": -97.7431
+    },
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 1800,
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Garden", "Parking", "Fireplace", "Laundry"],
+    "description": "Charming single-family home in quiet neighborhood with spacious backyard perfect for entertaining. Recently updated kitchen and bathrooms.",
+    "agentId": "agent-2"
+  },
+  {
+    "id": "prop-6",
+    "title": "Waterfront Apartment with Marina Views",
+    "type": "residential",
+    "listingType": "rent",
+    "price": 4200,
+    "address": {
+      "street": "987 Harbor View",
+      "city": "Miami",
+      "state": "FL",
+      "zipCode": "33101"
+    },
+    "coordinates": {
+      "lat": 25.7617,
+      "lng": -80.1918
+    },
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1400,
+    "images": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Swimming Pool", "Balcony", "Parking", "Air Conditioning"],
+    "description": "Beautiful waterfront apartment with stunning marina views. Enjoy resort-style living with access to pool, fitness center, and marina.",
+    "agentId": "agent-1"
+  },
+  {
+    "id": "prop-7",
+    "title": "Historic Loft in Arts District",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 950000,
+    "address": {
+      "street": "147 Gallery Row",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipCode": "90013"
+    },
+    "coordinates": {
+      "lat": 34.0522,
+      "lng": -118.2437
+    },
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1600,
+    "images": [
+      "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Parking", "Air Conditioning", "Dishwasher"],
+    "description": "Unique converted loft in the vibrant Arts District with exposed brick walls, high ceilings, and industrial finishes. Walking distance to galleries and restaurants.",
+    "agentId": "agent-3"
+  },
+  {
+    "id": "prop-8",
+    "title": "Mountain Cabin Retreat",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 485000,
+    "address": {
+      "street": "258 Pine Ridge Road",
+      "city": "Aspen",
+      "state": "CO",
+      "zipCode": "81611"
+    },
+    "coordinates": {
+      "lat": 39.1911,
+      "lng": -106.8175
+    },
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 1500,
+    "images": [
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Fireplace", "Garden", "Parking"],
+    "description": "Rustic mountain cabin with stunning views and private deck. Perfect weekend retreat or year-round residence for those seeking tranquility.",
+    "agentId": "agent-2"
+  },
+  {
+    "id": "prop-9",
+    "title": "Retail Space in Shopping Center",
+    "type": "commercial",
+    "listingType": "rent",
+    "price": 8000,
+    "address": {
+      "street": "369 Commerce Plaza",
+      "city": "Seattle",
+      "state": "WA",
+      "zipCode": "98101"
+    },
+    "coordinates": {
+      "lat": 47.6062,
+      "lng": -122.3321
+    },
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "area": 2000,
+    "images": [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Parking", "Security System"],
+    "description": "Prime retail space in busy shopping center with high foot traffic. Perfect for restaurants, boutiques, or service businesses.",
+    "agentId": "agent-1"
+  },
+  {
+    "id": "prop-10",
+    "title": "Luxury Estate with Pool and Tennis Court",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 2750000,
+    "address": {
+      "street": "741 Estate Drive",
+      "city": "Beverly Hills",
+      "state": "CA",
+      "zipCode": "90210"
+    },
+    "coordinates": {
+      "lat": 34.0901,
+      "lng": -118.4065
+    },
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "area": 5200,
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Swimming Pool", "Gym", "Garden", "Parking", "Security System"],
+    "description": "Magnificent estate featuring resort-style amenities including pool, tennis court, and guest house. Elegant living in prestigious neighborhood.",
+    "agentId": "agent-3"
+  },
+  {
+    "id": "prop-11",
+    "title": "Studio Apartment Near University",
+    "type": "residential",
+    "listingType": "rent",
+    "price": 1800,
+    "address": {
+      "street": "852 College Avenue",
+      "city": "Berkeley",
+      "state": "CA",
+      "zipCode": "94704"
+    },
+    "coordinates": {
+      "lat": 37.8715,
+      "lng": -122.2730
+    },
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "area": 500,
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Laundry", "Air Conditioning"],
+    "description": "Cozy studio apartment perfect for students or young professionals. Walking distance to campus and public transportation.",
+    "agentId": "agent-2"
+  },
+  {
+    "id": "prop-12",
+    "title": "Warehouse Space for Lease",
+    "type": "commercial",
+    "listingType": "rent",
+    "price": 15000,
+    "address": {
+      "street": "963 Industrial Boulevard",
+      "city": "Houston",
+      "state": "TX",
+      "zipCode": "77002"
+    },
+    "coordinates": {
+      "lat": 29.7604,
+      "lng": -95.3698
+    },
+    "bedrooms": 0,
+    "bathrooms": 3,
+    "area": 8000,
+    "images": [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1553266084-c6bd2467e25a?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Parking", "Security System"],
+    "description": "Large warehouse space with loading docks and office area. Ideal for distribution, manufacturing, or storage operations.",
+    "agentId": "agent-1"
+  },
+  {
+    "id": "prop-13",
+    "title": "Beachfront Condo with Ocean Views",
+    "type": "residential",
+    "listingType": "rent",
+    "price": 6500,
+    "address": {
+      "street": "159 Ocean Drive",
+      "city": "San Diego",
+      "state": "CA",
+      "zipCode": "92101"
+    },
+    "coordinates": {
+      "lat": 32.7157,
+      "lng": -117.1611
+    },
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 1900,
+    "images": [
+      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Swimming Pool", "Balcony", "Parking", "Air Conditioning"],
+    "description": "Spectacular beachfront condo with panoramic ocean views and private balcony. Wake up to the sound of waves every morning.",
+    "agentId": "agent-3"
+  },
+  {
+    "id": "prop-14",
+    "title": "Farmhouse on 5 Acres",
+    "type": "residential",
+    "listingType": "sale",
+    "price": 725000,
+    "address": {
+      "street": "357 Country Road",
+      "city": "Nashville",
+      "state": "TN",
+      "zipCode": "37201"
+    },
+    "coordinates": {
+      "lat": 36.1627,
+      "lng": -86.7816
+    },
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 2400,
+    "images": [
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1505142468610-359e7d316be0?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Garden", "Fireplace", "Parking"],
+    "description": "Charming farmhouse on 5 private acres with barn and pond. Perfect for those seeking country living with modern amenities.",
+    "agentId": "agent-2"
+  },
+  {
+    "id": "prop-15",
+    "title": "Downtown Loft with Exposed Brick",
+    "type": "residential",
+    "listingType": "rent",
+    "price": 3200,
+    "address": {
+      "street": "468 Brick Lane",
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "97201"
+    },
+    "coordinates": {
+      "lat": 45.5152,
+      "lng": -122.6784
+    },
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 900,
+    "images": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=800&q=80"
+    ],
+    "amenities": ["Parking", "Laundry", "Air Conditioning"],
+    "description": "Industrial loft with exposed brick walls, high ceilings, and large windows. Located in trendy downtown district near shops and restaurants.",
+    "agentId": "agent-1"
+  }
+]
