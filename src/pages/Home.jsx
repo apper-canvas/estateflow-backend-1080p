@@ -14,6 +14,8 @@ const Home = () => {
   const [priceRange, setPriceRange] = useState({ min: '', max: '' })
   const [propertyType, setPropertyType] = useState('all')
   const [darkMode, setDarkMode] = useState(false)
+  const [selectedProperty, setSelectedProperty] = useState(null)
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     const loadProperties = async () => {
@@ -57,8 +59,205 @@ const Home = () => {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
     document.documentElement.classList.toggle('dark')
+}
+
+  const handleViewDetails = (property) => {
+    setSelectedProperty(property)
+    setShowModal(true)
+    toast.info(`Viewing details for ${property?.title || 'property'}`)
   }
 
+  const closeModal = () => {
+    setShowModal(false)
+    setSelectedProperty(null)
+  }
+
+  // Property Detail Modal Component
+  const PropertyDetailModal = ({ property, isOpen, onClose }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+    if (!isOpen || !property) return null
+
+    const images = property.images || ['https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80']
+    
+    const nextImage = () => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    }
+
+    const prevImage = () => {
+      setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+    }
+
+    return (
+      <div className="fixed inset-0 z-50 overflow-y-auto">
+        <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+          <div className="fixed inset-0 transition-opacity bg-surface-900 bg-opacity-75" onClick={onClose}></div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="relative inline-block w-full max-w-4xl p-6 overflow-hidden text-left align-middle transition-all transform bg-white dark:bg-surface-800 shadow-xl rounded-3xl"
+          >
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-10 p-2 bg-white/90 dark:bg-surface-700/90 backdrop-blur-sm rounded-full hover:bg-white dark:hover:bg-surface-600 transition-all duration-200"
+            >
+              <ApperIcon name="X" className="h-5 w-5 text-surface-700 dark:text-surface-300" />
+            </button>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Image Gallery */}
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden">
+                  <img
+                    src={images[currentImageIndex]}
+                    alt={property.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {images.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 p-2 bg-white/90 dark:bg-surface-800/90 backdrop-blur-sm rounded-full hover:bg-white dark:hover:bg-surface-700 transition-all duration-200"
+                      >
+                        <ApperIcon name="ChevronLeft" className="h-4 w-4 text-surface-700 dark:text-surface-300" />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-white/90 dark:bg-surface-800/90 backdrop-blur-sm rounded-full hover:bg-white dark:hover:bg-surface-700 transition-all duration-200"
+                      >
+                        <ApperIcon name="ChevronRight" className="h-4 w-4 text-surface-700 dark:text-surface-300" />
+                      </button>
+                    </>
+                  )}
+                </div>
+                
+                {images.length > 1 && (
+                  <div className="flex space-x-2 overflow-x-auto">
+                    {images.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden ${
+                          index === currentImageIndex ? 'ring-2 ring-primary' : ''
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt={`${property.title} ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Property Details */}
+              <div className="space-y-6">
+                <div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      property.listingType === 'sale' 
+                        ? 'bg-accent text-white' 
+                        : 'bg-secondary text-white'
+                    }`}>
+                      For {property.listingType === 'sale' ? 'Sale' : 'Rent'}
+                    </span>
+                    <span className="px-3 py-1 bg-surface-100 dark:bg-surface-700 rounded-full text-xs font-semibold text-surface-700 dark:text-surface-300">
+                      {property.type === 'residential' ? 'Residential' : 'Commercial'}
+                    </span>
+                  </div>
+                  <h1 className="text-2xl lg:text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">
+                    {property.title}
+                  </h1>
+                  <div className="flex items-center text-surface-600 dark:text-surface-400 mb-4">
+                    <ApperIcon name="MapPin" className="h-4 w-4 mr-2" />
+                    <span>{property.address?.street}, {property.address?.city}, {property.address?.state} {property.address?.zipCode}</span>
+                  </div>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary">
+                    {formatPrice(property.price)}
+                    {property.listingType === 'rent' && 
+                      <span className="text-lg font-normal text-surface-500">/month</span>
+                    }
+                  </div>
+                </div>
+
+                {/* Property Specs */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center p-4 bg-surface-50 dark:bg-surface-700 rounded-xl">
+                    <ApperIcon name="Bed" className="h-6 w-6 mx-auto mb-2 text-primary" />
+                    <div className="text-lg font-bold text-surface-900 dark:text-surface-100">{property.bedrooms}</div>
+                    <div className="text-sm text-surface-600 dark:text-surface-400">Bedrooms</div>
+                  </div>
+                  <div className="text-center p-4 bg-surface-50 dark:bg-surface-700 rounded-xl">
+                    <ApperIcon name="Bath" className="h-6 w-6 mx-auto mb-2 text-primary" />
+                    <div className="text-lg font-bold text-surface-900 dark:text-surface-100">{property.bathrooms}</div>
+                    <div className="text-sm text-surface-600 dark:text-surface-400">Bathrooms</div>
+                  </div>
+                  <div className="text-center p-4 bg-surface-50 dark:bg-surface-700 rounded-xl">
+                    <ApperIcon name="Maximize" className="h-6 w-6 mx-auto mb-2 text-primary" />
+                    <div className="text-lg font-bold text-surface-900 dark:text-surface-100">{property.area?.toLocaleString()}</div>
+                    <div className="text-sm text-surface-600 dark:text-surface-400">Sq Ft</div>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div>
+                  <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Description</h3>
+                  <p className="text-surface-600 dark:text-surface-400 leading-relaxed">
+                    {property.description || 'Beautiful property in a prime location with modern amenities and excellent accessibility. Perfect for families looking for comfort and convenience.'}
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div>
+                  <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Features & Amenities</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {(property.features || ['Parking', 'Garden', 'Modern Kitchen', 'Air Conditioning', 'Security System', 'Balcony']).map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-2">
+                        <ApperIcon name="Check" className="h-4 w-4 text-accent" />
+                        <span className="text-sm text-surface-700 dark:text-surface-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Contact */}
+                <div className="pt-4 border-t border-surface-200 dark:border-surface-700">
+                  <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Contact Agent</h3>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <ApperIcon name="User" className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-surface-900 dark:text-surface-100">
+                        {property.agent?.name || 'Real Estate Agent'}
+                      </div>
+                      <div className="text-sm text-surface-600 dark:text-surface-400">
+                        {property.agent?.phone || '(555) 123-4567'}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex space-x-3">
+                    <button className="flex-1 px-4 py-3 bg-primary hover:bg-primary-dark text-white rounded-xl transition-all duration-200 font-semibold">
+                      <ApperIcon name="Phone" className="h-4 w-4 mr-2 inline" />
+                      Call
+                    </button>
+                    <button className="flex-1 px-4 py-3 bg-surface-100 dark:bg-surface-700 hover:bg-surface-200 dark:hover:bg-surface-600 text-surface-700 dark:text-surface-300 rounded-xl transition-all duration-200 font-semibold">
+                      <ApperIcon name="Mail" className="h-4 w-4 mr-2 inline" />
+                      Email
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    )
+  }
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -308,7 +507,10 @@ const Home = () => {
                             <ApperIcon name="Heart" className="h-4 w-4 mr-2 text-surface-600 dark:text-surface-400" />
                             <span className="text-sm font-medium text-surface-700 dark:text-surface-300">Save</span>
                           </button>
-                          <button className="px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-xl transition-all duration-200 font-semibold">
+<button 
+                            onClick={() => handleViewDetails(property)}
+                            className="px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-xl transition-all duration-200 font-semibold"
+                          >
                             View Details
                           </button>
                         </div>
@@ -319,8 +521,15 @@ const Home = () => {
               </motion.div>
             </AnimatePresence>
           )}
-        </motion.div>
+</motion.div>
       </main>
+      
+      {/* Property Detail Modal */}
+      <PropertyDetailModal 
+        property={selectedProperty}
+        isOpen={showModal}
+        onClose={closeModal}
+      />
     </div>
   )
 }
